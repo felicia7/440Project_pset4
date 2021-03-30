@@ -11,3 +11,13 @@
  The code used for PCA analysis is similar to the above
  but columns not needed for this initial analysis were removed,
  this file is titled "activated_PBMC_trimmed.xlsx"
+
+ Data used is group by activated PBMCs and untreated groups,
+ along with whether the proteins identified are from nuclear,
+ cytoplasm, or secreted fractions.
+  Activated cells were treated with lipopolysaccaride (LPS)
+  which induces an immune response in monocytes
+  via a toll-like pathway.
+
+  Analysis code is written in python and requires pandas, sklearn.preprocessing,
+  sklearn.decomposition (for PCA), and matplotlib
