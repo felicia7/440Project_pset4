@@ -1,2 +1,4 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+actvated_PBMC.xlsx filter=lfs diff=lfs merge=lfs -text
+activated_PBMC_trimmed.xlsx filter=lfs diff=lfs merge=lfs -text
