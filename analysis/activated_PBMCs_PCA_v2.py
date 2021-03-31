@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[7]:
+# In[1]:
 
 
 import pandas as pd 
@@ -12,12 +12,12 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA 
 
 
-# In[3]:
+# In[2]:
 
 
 #input trimmed dataset into dataframe
 #Relative path used, so will work if file is located in Project folder
-df_trim = pd.read_excel(r'./../Project\activated_PBMC_trimmed.xlsx')
+df_trim = pd.read_excel(r'./../Project_data\activated_PBMC_trimmed.xlsx')
 
 display(df_trim)
 
@@ -25,7 +25,7 @@ display(df_trim)
 #fractions include nucleus, cytoplasm, and secreted protein samples
 
 
-# In[5]:
+# In[3]:
 
 
 #This code standardizes the dataset's features onto a unit scale (mean = 0, variance = 1)
@@ -40,7 +40,7 @@ y = df_trim.loc[:,['found']].values
 x = StandardScaler().fit_transform(x)
 
 
-# In[9]:
+# In[4]:
 
 
 #This code uses the pca function to reduce dataset dimensionality and cluster
@@ -54,7 +54,7 @@ principalDF = pd.DataFrame(data = principalComponents, columns = ['principal com
 finalDf = pd.concat([principalDF, df_trim[['found']]], axis =1)
 
 
-# In[10]:
+# In[5]:
 
 
 #This code plots the PCA figure and saves a png to a subfolder named "Figures"
